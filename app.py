@@ -2,8 +2,9 @@ from flask import Flask, render_template, request
 import datetime
 import pymongo
 
-myclient = pymongo.MongoClient("mongodb://localhost:27017")
-mydb = myclient["mydatabase"]
+myclient = pymongo.MongoClient("mongodb://tgsbs:614Nmain@ds115931.mlab.com:15931/tgsbs")
+mydb = myclient["tgsbs"]
+mycol = mydb["workouts"]
 
 
 app = Flask(__name__)
@@ -17,7 +18,8 @@ def send():
         workout['date'] = today
         workout['press'] = request.form['press']
         workout['pressreps'] = request.form['pressreps']
-        workout['standingrow'] = request.form['standingrowreps']
+        workout['standingrow'] = request.form['standingrow']
+        workout['standingrowreps'] = request.form['standingrowreps']
         workout['curls'] = request.form['curls']
         workout['curlsreps'] = request.form['curlsreps']
         workout['flys'] = request.form['flys']
@@ -26,7 +28,7 @@ def send():
         workout['distance'] = request.form['distance']
 
         print(workout)
-
+    mycol.insert_one(workout)
     return render_template('template.html')
 
 if __name__ == '__main__':
