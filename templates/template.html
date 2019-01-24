@@ -7,20 +7,23 @@
         <title>Workout Tracker</title>
         <style>
             h1 {text-align: center;}
+            div {display: inline;}
             form {text-align: center;}
-            input {width:45%;margin:5px;border:solid 2px black;padding: 10px;}
+            input {margin:5px;border:solid 2px black;padding: 10px;}
         </style>
     </head>
     
 <form action="/" method="POST" >
     
     <h1>Set 1</h1>
-    <input type="number" name="press" placeholder="Press"><input type="number" name="pressreps" placeholder="Reps"><br><br>
-    <input type="number" name="standingrow" placeholder="Standing Row"><input type="number" name="standingrowreps" placeholder="Reps"><br><br>
-    <input type="number" name="curls" placeholder="Curls"><input type="number" name="curlsreps" placeholder="Reps"><br><br>
-    <input type="number" name="flys" placeholder="Flys"><input type="number" name="flyreps" placeholder="Reps"><br><br>
+    
+        <div class="col"><input type="number" name="press" placeholder="Press"></div><div class="col"><input type="number" name="pressreps" placeholder="Reps"></div><br><br>
+    
+    <div class="col"><input type="number" name="standingrow" placeholder="Standing Row"></div><div class="col"><input type="number" name="standingrowreps" placeholder="Reps"></div><br><br>
+    <div class="col"><input type="number" name="curls" placeholder="Curls"></div><div class="col"><input type="number" name="curlsreps" placeholder="Reps"></div><br><br>
+    <div class="col"><input type="number" name="flys" placeholder="Flys"></div><div class="col"><input type="number" name="flyreps" placeholder="Reps"></div><br><br>
     <h1>Cardio</h1>
-    <input type="number" name="distance" placeholder="Distance"><input type="number" name="time" placeholder="Time">
+    <div class="col"><input type="number" name="distance" placeholder="Distance"></div><div class="col"><input type="number" name="time" placeholder="Time"></div>
     <br>
     <input style="margin:10px;border:none;background-color:white;padding:5px;border: solid black 1px" type="submit">
     </form>
