@@ -1,18 +1,26 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
      <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>Workout Tracker</title>
+        <style>
+            h1 {text-align: center;}
+            form {text-align: center;}
+            input {width:auto;margin:5px;border:solid 2px black;padding: 10px;}
+        </style>
     </head>
+    
 <form action="/" method="POST" >
+    
     <h1>Set 1</h1>
-    <input type="text" name="press" placeholder="Press"><input type="text" name="pressreps" placeholder="Reps"><br><br>
-    <input type="text" name="standingrow" placeholder="Standing Row"><input type="text" name="standingrowreps" placeholder="Reps"><br><br>
-    <input type="text" name="curls" placeholder="Curls"><input type="text" name="curlsreps" placeholder="Reps"><br><br>
-    <input type="text" name="flys" placeholder="Flys"><input type="text" name="flyreps" placeholder="Reps"><br><br>
+    <input type="number" name="press" placeholder="Press"><input type="number" name="pressreps" placeholder="Reps"><br><br>
+    <input type="number" name="standingrow" placeholder="Standing Row"><input type="number" name="standingrowreps" placeholder="Reps"><br><br>
+    <input type="number" name="curls" placeholder="Curls"><input type="number" name="curlsreps" placeholder="Reps"><br><br>
+    <input type="number" name="flys" placeholder="Flys"><input type="number" name="flyreps" placeholder="Reps"><br><br>
     <h1>Cardio</h1>
-    <input type="text" name="time" placeholder="Time"><input type="text" name="distance" placeholder="Distance">
+    <input type="number" name="distance" placeholder="Distance"><input type="number" name="time" placeholder="Time">
     <br>
     <input style="margin:10px;border:none;background-color:white;padding:5px;border: solid black 1px" type="submit">
     </form>

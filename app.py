@@ -10,9 +10,12 @@ x = datetime.datetime.now()
 today = x.strftime("%m"+"-"+"%d"+"-"+"%Y")
 workout = {}
 
+
+print(today)
 @app.route('/', methods=['GET', 'POST'])
 def send():
     if request.method == 'POST':
+
         myclient = pymongo.MongoClient("mongodb://tgsbs:614Nmain@ds115931.mlab.com:15931/tgsbs")
         mydb = myclient["tgsbs"]
         mycol = mydb["workouts"]
@@ -27,10 +30,9 @@ def send():
         workout['flyreps'] = request.form['flyreps']
         workout['time'] = request.form['time']
         workout['distance'] = request.form['distance']
-        mycol.insert_one(workout)
-
         print(workout)
     return render_template('template.html')
+    mycol.insert_one(workout)
 
 if __name__ == '__main__':
     app.run(debug=True)
